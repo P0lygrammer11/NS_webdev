@@ -1,57 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>How to Swim</title>
     <meta charset="UTF-8">
     <style>
-        #box {
-            height : 75px;
-            width : 75px;
-            background-color: bisque;
-            color : white ;
-            text-align : center;
-            margin : 0 auto;
-        }
-        button{
-            margin-top: 25px;
-            padding: 25px;
-        }
-        #grid-wrapper {
+        body {
+            font-family: "Comic Sans MS", Comfortaa, sans-serif;
+            line-height: 1.6;
+            background-color: #F0F4F8;
+            padding: 20px;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 10px;
+            gap: 20px;
+            align-items: center;
+        }
+        h1, h2, #question-link, #getting-started {
+            grid-column: 1 / -1;
+        }
+        h1, h2 {
+            color: #102A43;
+        }
+        h1 {
+            text-align: center; 
+            padding: 20px;      
+        }
+        p {
+            color: #334E68;
+        }
+        li {
+            color: #0077B6;
+        }
+        #question-mark {
+            height: 100px;
+            width: 100px;
+            border-radius: 8px;
+        }
+        #getting-started {
+            border-radius: 8px;
+            background-color: rgb(180, 212, 216);
+            padding: 25px;
+        }
+        ul {
+            border-radius: 8px;
+            background-color: rgb(209, 238, 236);
+            padding: 25px 40px;
+        }
+        #swimming-image {
+            height: 300px;
+            width: 250px;
+            border-radius: 8px;
+            object-fit: cover;
         }
     </style>
 </head>
 <body>
-    <h1>Alignment notes</h1>
-    <div id="grid-wrapper">
-        <div id="box">
-            <P>box1</P>
-        </div>
-        <div id="box">
-            <P>box2</P>
-        </div>  
-        <div id="box">
-            <P>box3</P>
-        </div>
-        <div id="box">
-            <P>box4</P>
-        </div>
-    </div>
-    <div id="Flex-wrapper">
-        <div id="box">
-            <P>box1</P>
-        </div>
-        <div id="box">
-            <P>box2</P>
-        </div>  
-        <div id="box">
-            <P>box3</P>
-        </div>
-        <div id="box">
-            <P>box4</P>
-        </div>
-    </div>
-    <button>Click me</button>
+
+    <h1>How to Swim?</h1>
+    
+    <a id="question-link" href="https://pixabay.com" target="_blank">
+        <img id="question-mark" src="images (2).jpg" alt="question mark">
+    </a>
+
+    <h2>Getting Started!</h2>
+    <p id="getting-started">Swimming is a vital skill that offers numerous benefits, from fitness to safety. Whether you're a complete beginner or looking to refine your technique, understanding the basics is essential. There are a lot of ways to keep yourself floating in the water: using a kickboard, practicing your strokes, and learning to relax are all effective methods.</p>
+
+    <h2>Swimming Essentials</h2>
+    <ul>
+        <li>Swimsuit</li>
+        <li>Goggles</li>
+        <li>Swim cap</li>
+        <li>Kickboard</li>
+        <li>Towel</li>
+    </ul>
+
+    <img id="swimming-image" src="swimming.jpg" alt="Person swimming">
+
 </body>
 </html>

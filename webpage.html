@@ -1,90 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>How to swim</title>
+    <title>How to Swim</title>
     <meta charset="UTF-8">
     <style>
         body {
-            font-family:comic sans ms, comfortaa;
+            font-family: "Comic Sans MS", Comfortaa, sans-serif;
             line-height: 1.6;
             background-color: #F0F4F8;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            align-items: center;
+        }
+        h1, h2, #question-link, #getting-started {
+            grid-column: 1 / -1;
         }
         h1, h2 {
-            color:#102A43;
-            margin-right: 10px;
+            color: #102A43;
+        }
+        h1 {
+            text-align: center; 
+            padding: 20px;      
         }
         p {
             color: #334E68;
         }
-        a {
-            color: #FFFFFF;
-        }
         li {
-            color:#0077B6;
+            color: #0077B6;
+        }
+        #question-mark {
+            height: 100px;
+            width: 100px;
+            border-radius: 8px;
+        }
+        #getting-started {
+            border-radius: 8px;
+            background-color: rgb(180, 212, 216);
+            padding: 25px;
+        }
+        ul {
+            border-radius: 8px;
+            background-color: rgb(209, 238, 236);
+            padding: 25px 40px;
         }
         #swimming-image {
             height: 300px;
             width: 250px;
             border-radius: 8px;
-            margin-left: 10px;
+            object-fit: cover;
         }
-        h1 {
-            text-align: center; 
-            padding: 20px;      
-         }
-         #question-mark {
-            height: 100px;
-            width: 100px;
-            border-radius: 8px;
-            margin-left: 10px;
-         }
-         #getting-started {
-            border-radius: 8px;
-            background-color: rgb(180, 212, 216);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-         }
-         #benefits {
-            border-radius: 8px;
-            background-color: rgb(209, 238, 236);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-         }
-        </style>
+    </style>
 </head>
 <body>
 
     <h1>How to Swim?</h1>
-    <div>
-        <div>        
-            <a href="https://pixabay.com/illustrations/question-mark-question-response-1019993/" target="_blank">        <img id="question-mark" src="images (2).jpg" alt="question mark">
-            </a>
-</div> 
-
+    
+    <a id="question-link" href="https://pixabay.com" target="_blank">
+        <img id="question-mark" src="images (2).jpg" alt="question mark">
+    </a>
 
     <h2>Getting Started!</h2>
-    <div id="getting-started">
-        <p>Swimming is a vital skill that offers numerous benefits, from fitness to safety. Whether you're a complete beginner or looking to refine your technique, understanding the basics is essential. There are a lot of ways to keep yourself floating in the water: using a kickboard, practicing your strokes, and learning to relax are all effective methods.
-        There are lots of ways to propel yourself through water. Dog paddle, sidestroke, and double-arm backstroke come to mind when thinking of recreational strokes that you might see at the pool.</p>
-    </div>
-    <ol>
-        <h2> Essentials:</h2>
+    <p id="getting-started">Swimming is a vital skill that offers numerous benefits, from fitness to safety. Whether you're a complete beginner or looking to refine your technique, understanding the basics is essential. There are a lot of ways to keep yourself floating in the water: using a kickboard, practicing your strokes, and learning to relax are all effective methods.</p>
+
+    <h2>Swimming Essentials</h2>
+    <ul>
         <li>Swimsuit</li>
         <li>Goggles</li>
-        <li>Swim Cap</li>
-        <li>Towel</li>
+        <li>Swim cap</li>
         <li>Kickboard</li>
-    </ol>
-    <a href="https://us.zen8swimtrainer.com/blogs/news/5-tips-for-beginner-swimmers?srsltid=AYCX9vIHdYXKexoqT3eeaJ6XBdw6YMAXB9CE2u8d9Z8DsE2GFgSAF2Dr&shpxid=c1c88b58-b71f-49fa-afb4-b134f0b247f0" target="_blank"><img id="swimming-image" src="images (3).jpg" alt="swimming"></a>
-    <p> more information: <a href="https://us.zen8swimtrainer.com/blogs/news/5-tips-for-beginner-swimmers?srsltid=AYCX9vIHdYXKexoqT3eeaJ6XBdw6YMAXB9CE2u8d9Z8DsE2GFgSAF2Dr&shpxid=c1c88b58-b71f-49fa-afb4-b134f0b247f0">5 essentials of swimming</a>
-    </p>    
-    <p>Benefits of Swimming:</p>  
-    <div id="benefits">
-    <p>Swimming offers a full-body workout, improving cardiovascular health, strength, and flexibility. Although all those are good for fitness, adult swimmers generally get the best workout by using the four competitive strokes: the long-axis strokes of freestyle and backstroke and the short-axis strokes of breaststroke and butterfly. The long-axis strokes are so named because much of the movements are centered around the vertical line of your body and rotation around that axis (think top of your head straight down through your feet). Similarly, the short-axis strokes focus movements through the horizontal axis of your body (think horizontally through your lower ribcage).
+        <li>Towel</li>
+    </ul>
 
-All four strokes have positions and movements critical to helping you move through the water with the greatest velocity and the least amount of effort.</p>
-    </div>
+    <img id="swimming-image" src="swimming.jpg" alt="Person swimming">
+
 </body>
 </html>

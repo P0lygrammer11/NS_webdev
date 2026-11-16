@@ -139,12 +139,12 @@
         </a>
     </p>
 
-    <!-- Show/Hide button -->
+
     <button id="toggle-button" onclick="toggleContent()">
         Show More
     </button>
 
-    <!-- Extra paragraph and image -->
+
     <div id="more-content" style="display: none;">
         <h2>More About Swimming!</h2>
         <p>
@@ -156,11 +156,10 @@
     </div>
 
     <script>
-        // Image changes when the mouse hovers over it
         const swimmingImage = document.getElementById("swimming-image");
 
         const originalImage = "images (3).jpg";
-        const hoverImage = "images (2).jpg";
+        const hoverImage = "images (6).jpg";
 
         swimmingImage.onmouseover = function() {
             swimmingImage.src = hoverImage;
@@ -170,7 +169,6 @@
             swimmingImage.src = originalImage;
         };
 
-        // Button shows or hides additional content
         function toggleContent() {
             const content = document.getElementById("more-content");
             const button = document.getElementById("toggle-button");

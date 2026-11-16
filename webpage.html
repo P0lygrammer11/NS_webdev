@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,15 +22,15 @@
             color: #102A43;
         }
         h1 {
-            text-align: center; 
-            padding: 20px;      
+            text-align: center;
+            padding: 20px;
         }
         p {
             color: #334E68;
             margin-left: 10px;
         }
         a {
-            color: #FFFFFF; 
+            color: #FFFFFF;
         }
         li {
             color: #0077B6;
@@ -55,27 +56,75 @@
             border-radius: 8px;
             object-fit: cover;
         }
-        #benefits{
+        #benefits {
             background-color: rgb(180, 212, 216);
             padding: 25px;
             border-radius: 8px;
+        }
+
+        /* New styles for the button and extra content */
+        #more-content {
+            grid-column: 1 / -1;
+            background-color: rgb(180, 212, 216);
+            padding: 25px;
+            border-radius: 8px;
+        }
+
+        #more-image {
+            width: 250px;
+            border-radius: 8px;
+        }
+
+        #toggle-button {
+            grid-column: 1 / -1;
+            padding: 12px 20px;
+            background-color: #0077B6;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
 
     <h1>How to Swim?</h1>
-    
+
     <a id="question-link" href="https://pixabay.com" target="_blank">
         <img id="question-mark" src="images (2).jpg" alt="question mark">
     </a>
 
     <h2>Getting Started!</h2>
-    <p id="getting-started">Swimming is a vital skill that offers numerous benefits, from fitness to safety. Whether you're a complete beginner or looking to refine your technique, understanding the basics is essential. There are a lot of ways to keep yourself floating in the water: using a kickboard, practicing your strokes, and learning to relax are all effective methods.</p>
-     <h2>Benefits of Swimming:</h2>
-    <p id="benefits">Swimming offers a full-body workout, improving cardiovascular health, strength, and flexibility. Although all those are good for fitness, adult swimmers generally get the best workout by using the four competitive strokes: the long-axis strokes of freestyle and backstroke and the short-axis strokes of breaststroke and butterfly. The long-axis strokes are so named because much of the movements are centered around the vertical line of your body and rotation around that axis (think top of your head straight down through your feet). Similarly, the short-axis strokes focus movements through the horizontal axis of your body (think horizontally through your lower ribcage). 
-    <a href="https://us.zen8swimtrainer.com/blogs/news/5-tips-for-beginner-swimmers?srsltid=AYCX9vIHdYXKexoqT3eeaJ6XBdw6YMAXB9CE2u8d9Z8DsE2GFgSAF2Dr&shpxid=c1c88b58-b71f-49fa-afb4-b134f0b247f0" target="_blank"><img id="swimming-image" src="images (3).jpg" alt="swimming"  width="250px"></a>
+
+    <p id="getting-started">
+        Swimming is a vital skill that offers numerous benefits, from fitness to safety.
+        Whether you're a complete beginner or looking to refine your technique,
+        understanding the basics is essential. There are a lot of ways to keep yourself
+        floating in the water: using a kickboard, practicing your strokes, and learning
+        to relax are all effective methods.
+    </p>
+
+    <h2>Benefits of Swimming:</h2>
+
+    <p id="benefits">
+        Swimming offers a full-body workout, improving cardiovascular health, strength,
+        and flexibility. Although all those are good for fitness, adult swimmers generally
+        get the best workout by using the four competitive strokes: the long-axis strokes
+        of freestyle and backstroke and the short-axis strokes of breaststroke and butterfly.
+        The long-axis strokes are so named because much of the movements are centered
+        around the vertical line of your body and rotation around that axis.
+        Similarly, the short-axis strokes focus movements through the horizontal axis.
+        
+        <a href="https://us.zen8swimtrainer.com/blogs/news/5-tips-for-beginner-swimmers"
+        target="_blank">
+            <img id="swimming-image" src="images (3).jpg"
+            alt="swimming">
+        </a>
+    </p>
+
     <h2>Swimming Essentials</h2>
+
     <ul>
         <li>Swimsuit</li>
         <li>Goggles</li>
@@ -83,10 +132,58 @@
         <li>Kickboard</li>
         <li>Towel</li>
     </ul>
-    <p><a href="https://us.zen8swimtrainer.com/blogs/news/5-tips-for-beginner-swimmers?srsltid=AYCX9vIHdYXKexoqT3eeaJ6XBdw6YMAXB9CE2u8d9Z8DsE2GFgSAF2Dr&shpxid=c1c88b58-b71f-49fa-afb4-b134f0b247f0">Learn more about swimming</a>
-    
-    
 
-    </a>
+    <p>
+        <a href="https://us.zen8swimtrainer.com/blogs/news/5-tips-for-beginner-swimmers">
+            Learn more about swimming
+        </a>
+    </p>
+
+    <!-- Show/Hide button -->
+    <button id="toggle-button" onclick="toggleContent()">
+        Show More
+    </button>
+
+    <!-- Extra paragraph and image -->
+    <div id="more-content" style="display: none;">
+        <h2>More About Swimming!</h2>
+        <p>
+            Swimming is also a great way to relax and enjoy the water.
+            Beginners can improve by practicing regularly, learning proper
+            breathing techniques, and becoming comfortable in the water.
+        </p>
+        <img id="more-image" src="images (3).jpg" alt="A swimmer">
+    </div>
+
+    <script>
+        // Image changes when the mouse hovers over it
+        const swimmingImage = document.getElementById("swimming-image");
+
+        const originalImage = "images (3).jpg";
+        const hoverImage = "images (2).jpg";
+
+        swimmingImage.onmouseover = function() {
+            swimmingImage.src = hoverImage;
+        };
+
+        swimmingImage.onmouseout = function() {
+            swimmingImage.src = originalImage;
+        };
+
+        // Button shows or hides additional content
+        function toggleContent() {
+            const content = document.getElementById("more-content");
+            const button = document.getElementById("toggle-button");
+
+            if (content.style.display === "none") {
+                content.style.display = "block";
+                button.textContent = "Show Less";
+            } else {
+                content.style.display = "none";
+                button.textContent = "Show More";
+            }
+        }
+    </script>
+
 </body>
 </html>
